@@ -1,0 +1,49 @@
+<div class="sidebar">
+    <div class="sidebar-wraper">
+        <header class="sidebar-header">
+        <a class="logo" href="/">
+            <img src="{{url_for("static", filename="img/logo.png")}}" alt="">
+            {{site['name']|upper}}
+        </a>
+        </header>
+        <div class="sidebar-nav">
+            <ul class="nav">
+                <li {% if request.endpoint=="admin.index" %}class="active"{% endif %}><a
+                        href="{{ url_for("admin.index") }}">
+                    <span class="fa fa-book"></span>
+                    代码
+                </a></li>
+                <li {% if request.endpoint=="admin.ceshi" %}class="active"{% endif %}><a
+                        href="{{ url_for("admin.ceshi") }}">
+                    <span class="fa fa-book"></span>
+                    测试
+                </a></li>
+                <li {% if request.endpoint=="admin.tiaocan" %}class="active"{% endif %}><a
+                        href="{{ url_for("admin.tiaocan") }}">
+                    <span class="fa fa-book"></span>
+                    调参
+                </a></li>
+{#                <li {% if request.endpoint=="" %}class="active"{% endif %}><a#}
+{#                        href="{{ url_for("admin.upload") }}">#}
+{#                    <span class="fa fa-book"></span>#}
+{#                    图片上传测试#}
+{#                </a></li><li {% if request.endpoint=="" %}class="active"{% endif %}><a#}
+{#                        href="{{ url_for("admin.uploadOK") }}">#}
+{#                    <span class="fa fa-book"></span>#}
+{#                    图片上传测试2#}
+{#                </a></li>#}
+                <li {%if request.endpoint=="admin.user"%}class="active"{%endif%}><a href="{{url_for("admin.user")}}">
+                    <span class="fa fa-user"></span>
+                    用户
+                </a></li>
+                <li {%if request.endpoint=="admin.site"%}class="active"{%endif%}><a href="{{url_for("admin.site")}}">
+                    <span class="fa fa-user"></span>
+                    设置
+                </a></li>
+ 
+            </ul>
+        </div>
+    </div>
+</div>
+
+
