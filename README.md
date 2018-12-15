@@ -1,8 +1,9 @@
 # AI_experiments
 
 ## 系统框架
-Flask+MySQL
+Flask+MySQL python3.6
 直接安装requiremnets即可，需要配置mysql数据库
+'pip install -r requirements.txt'
 
 ### 数据库
 数据库名称：beibq
